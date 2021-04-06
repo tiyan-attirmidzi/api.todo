@@ -24,8 +24,8 @@ export const getTodo = async (req: Request, res: Response) => {
 
 export const insertTodo = async (req: Request, res: Response): Promise<void> => {
 
-    // const body = req.body as Pick<Todo, 'title' | 'status'>
-    const body : Pick<Todo, 'title' | 'status'> = req.body
+    const body = req.body as Pick<Todo, 'title' | 'status'>
+    // const body : Pick<Todo, 'title' | 'status'> = req.body
 
     // if all or one of the required body is undefined
     if (!body.title || !body.status) {
@@ -116,6 +116,5 @@ export const deleteTodo = async (req: Request, res: Response): Promise<void> => 
         dataTodo,
         todos: allTodos
     })
-
 
 }

@@ -31,8 +31,8 @@ exports.getTodo = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     });
 });
 exports.insertTodo = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    // const body = req.body as Pick<Todo, 'title' | 'status'>
     const body = req.body;
+    // const body : Pick<Todo, 'title' | 'status'> = req.body
     // if all or one of the required body is undefined
     if (!body.title || !body.status) {
         res.status(401).json({

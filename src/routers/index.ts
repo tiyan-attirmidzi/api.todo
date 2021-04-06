@@ -1,5 +1,7 @@
 import { Router } from 'express'
 
+import { getTodos, getTodo, insertTodo, updateTodo, deleteTodo } from '../controller/todos/index'
+
 const router = Router()
 
 router.get('/api/v1/todos', getTodos)

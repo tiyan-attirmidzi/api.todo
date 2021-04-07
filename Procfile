@@ -1,1 +1,1 @@
-web: node dist/js/app.js
+web: concurrently \"tsc -w\" \"nodemon dist/js/app.js\"

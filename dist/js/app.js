@@ -18,7 +18,8 @@ app.get('/', (req, res) => {
     res.send('Welcome, Todo Apps API');
 });
 mongoose_1.default.set('useFindAndModify', true);
-mongoose_1.default.connect(uri, options)
+mongoose_1.default
+    .connect(uri, options)
     .then(() => {
     app.listen(PORT, () => {
         console.info(`App is listen at http://localhost:${PORT}`);

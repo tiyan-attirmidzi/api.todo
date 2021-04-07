@@ -7,9 +7,11 @@
     "build": "tsc",
     "start": "concurrently \"tsc -w\" \"nodemon dist/js/app.js\"",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "git add . && git commit -m Heroku && git push heroku production:master",
     "eslint": "npx eslint . --ext .js,.jsx,.ts,.tsx",
     "prettier": "prettier --config .prettierrc 'src/**/*.ts' --write"
   },
+  "engines": { "node": "14.15.4" },
   "keywords": [],
   "author": "",
   "license": "ISC",
